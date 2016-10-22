@@ -22,10 +22,10 @@ To test the app, you need at least two smarthones.
 
 2. Install it to other smartphone, in 'cared' mode, using id from step one.
 
-3. Wait till the cared phone uploads report. (at real life it would be an our, but for testing I set it to 2 minutes)
+3. Wait till the cared phone uploads report. (at real life it would be an hour, but for testing I set it to 2 minutes)
 
 4. Wait till the carer phone downloads the report. Since miminum allowed by Google is 1 hr, you better do it manually,
-by hitting the sync icon on the toolbar.
+by touching the sync icon on the toolbar.
 
 5. Cared phone information will appear. You can go to settings, change details etc. Depending on settings and the report
 from your 'cared' smartphone, widget with the old lady will  turn yellow or green.
@@ -34,7 +34,6 @@ from your 'cared' smartphone, widget with the old lady will  turn yellow or gree
 
 7. Cared phone should keep sending reports even after reboot.
 
-8. Change KeepAnEyeId in cared phone to 62276370. You will see three more cared phones (my). Old ones still would be displayed,
-but their state won't be updated. I don'd delete database records, just hide them (by switch in settings).
+8. Change KeepAnEyeId in 'carer' phone to 62276370. You will see three more 'cared' phones (those are mine). Old ones still would be displayed, but their state won't be updated. I don'd delete database records, just hide them (by switch in settings).
 
 That's about it. Enjoy. :)
