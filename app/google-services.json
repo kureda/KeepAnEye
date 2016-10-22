@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "202426397462",
+    "firebase_url": "https://keepaneye-0.firebaseio.com",
+    "project_id": "keepaneye-0",
+    "storage_bucket": "keepaneye-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202426397462:android:855105a758a895d1",
+        "android_client_info": {
+          "package_name": "com.kureda.android.keepaneye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202426397462-9ob21v3gvts6rffr968gjdkrpc19jtar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6LoHp0NPvE-vxGVkHT_CotWjlEv6-p4Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
