@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--general-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#0000</color>
+    <color name="silver">#F0F0F0</color>
+    <color name="green700">#388E3C</color>
+    <color name="amberA200">#FFD740</color>
+    <color name="red500">#F44336</color>
+    <color name="red700">#D32F2F</color>
+
+    <!--cared theme-->
+    <color name="amber500">#FFC107</color>
+    <color name="amber700">#FFA000</color>
+    <color name="amber900">#FF6F00</color>
+    <color name="orange900">#E65100</color>
+    <color name="blueA200">#448AFF</color>
+
+    <!--carer theme-->
+    <color name="blue100">#bbdefb</color>
+    <color name="blue500">#2196f3</color>
+    <color name="blue700">#1976d2</color>
+    <color name="orangeA200">#FFAB40</color>
+
+    <!--sygnal carer colors-->
+    <color name="greenA400">#00E676</color>
+    <color name="orange">#FFBB00</color>
+    <color name="red">#f44336</color>
+</resources>

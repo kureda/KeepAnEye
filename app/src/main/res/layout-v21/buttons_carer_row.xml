@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mat="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/phone_call_button"
+        style="@style/carer_button"
+        android:layout_margin="8dp"
+        android:elevation="6dp"
+        android:onClick="makePhoneCall"
+        android:src="@drawable/ic_call_black_24dp"
+        mat:fabSize="mini" />
+</merge>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue100"
+    android:fillViewport="true">
+
+    <!--Without this wrap, the ScrollView won't show boottom margin-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/Carer.Config.Screen"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:background="@color/silver"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <Spinner
+                    android:id="@+id/conf_cared"
+                    style="@style/Carer.Config.Control"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:textAlignment="center" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/conf_hidden"
+                    style="@style/Carer.Config.Control"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@color/white"
+                    android:text="@string/show"
+                    android:textColor="@color/blue700" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/conf_row_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical"
+                android:paddingTop="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Carer.Config.Label"
+                        android:text="@string/label_phone_number" />
+
+                    <EditText
+                        android:id="@+id/conf_phone"
+                        style="@style/Carer.Config.Control.TextField"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/conf_avatar"
+                        style="@style/Carer.Config.Control.Spinner.Hours" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/silver"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Carer.Config.Label"
+                            android:text="@string/label_choose_wake" />
+
+                        <Spinner
+                            android:id="@+id/conf_sleep"
+                            style="@style/Carer.Config.Control.Spinner.Hours" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@color/silver"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Carer.Config.Label"
+                            android:text="@string/label_choose_sleep" />
+
+                        <Spinner
+                            android:id="@+id/conf_wake"
+                            style="@style/Carer.Config.Control.Spinner.Hours" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/Carer.Config.Label"
+                    android:layout_gravity="left"
+                    android:paddingStart="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="16dp"
+                    android:text="@string/label_alarms" />
+
+                <LinearLayout style="@style/Carer.Config.Control.Row">
+
+                    <TextView
+                        style="@style/Carer.Config.Label.Fill"
+                        android:text="@string/label_report" />
+
+                    <FrameLayout style="@style/Carer.Config.Control.TintYellow">
+
+                        <Spinner
+                            android:id="@+id/conf_report_yellow"
+                            style="@style/Carer.Config.Control.Spinner.Alert" />
+                    </FrameLayout>
+
+                    <FrameLayout style="@style/Carer.Config.Control.TintRed">
+
+                        <Spinner
+                            android:id="@+id/conf_report_red"
+                            style="@style/Carer.Config.Control.Spinner.Alert" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/Carer.Config.Control.Row">
+
+                    <TextView
+                        style="@style/Carer.Config.Label.Fill"
+                        android:text="@string/label_login" />
+
+                    <FrameLayout style="@style/Carer.Config.Control.TintYellow">
+
+                        <Spinner
+                            android:id="@+id/conf_login_yellow"
+                            style="@style/Carer.Config.Control.Spinner.Alert" />
+                    </FrameLayout>
+
+                    <FrameLayout style="@style/Carer.Config.Control.TintRed">
+
+                        <Spinner
+                            android:id="@+id/conf_login_red"
+                            style="@style/Carer.Config.Control.Spinner.Alert" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/Carer.Config.Control.Row">
+
+                    <TextView
+                        style="@style/Carer.Config.Label.Fill"
+                        android:text="@string/label_walk" />
+
+                    <FrameLayout style="@style/Carer.Config.Control.TintYellow">
+
+                        <Spinner
+                            android:id="@+id/conf_walk_yellow"
+                            style="@style/Carer.Config.Control.Spinner.Alert" />
+                    </FrameLayout>
+
+                    <FrameLayout style="@style/Carer.Config.Control.TintRed">
+
+                        <Spinner
+                            android:id="@+id/conf_walk_red"
+                            style="@style/Carer.Config.Control.Spinner.Alert" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/Carer.Config.Control.Row">
+
+                    <TextView
+                        style="@style/Carer.Config.Label.Fill"
+                        android:text="@string/label_ride" />
+
+                    <FrameLayout style="@style/Carer.Config.Control.TintYellow">
+
+                        <Spinner
+                            android:id="@+id/conf_ride_yellow"
+                            style="@style/Carer.Config.Control.Spinner.Alert" />
+                    </FrameLayout>
+
+                    <FrameLayout style="@style/Carer.Config.Control.TintRed">
+
+                        <Spinner
+                            android:id="@+id/conf_ride_red"
+                            style="@style/Carer.Config.Control.Spinner.Alert" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btn_carer_cancel"
+                        style="@style/carer_config_button"
+                        android:layout_toLeftOf="@+id/btn_carer_save"
+                        android:layout_toStartOf="@+id/btn_carer_save"
+                        android:onClick="cancel"
+                        android:text="@string/cancel_btn_txt"
+                        android:textColor="@color/red700" />
+
+                    <Button
+                        android:id="@+id/btn_carer_save"
+                        style="@style/carer_config_button"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:onClick="save"
+                        android:text="@string/save_btn_txt"
+                        android:textColor="@color/green700" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

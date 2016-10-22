@@ -1,0 +1,59 @@
+<resources>
+    <!--If you change those arrays, change carer.util.Util methods and corresponting tests.-->
+    <string-array name="hour_array">
+        <item>1 am</item>
+        <item>2 am</item>
+        <item>3 am</item>
+        <item>4 am</item>
+        <item>5 am</item>
+        <item>6 am</item>
+        <item>7 am</item>
+        <item>8 am</item>
+        <item>9 am</item>
+        <item>10 am</item>
+        <item>11 am</item>
+        <item>noon</item>
+        <item>1 pm</item>
+        <item>2 pm</item>
+        <item>3 pm</item>
+        <item>4 pm</item>
+        <item>5 pm</item>
+        <item>6 pm</item>
+        <item>7 pm</item>
+        <item>8 pm</item>
+        <item>9 pm</item>
+        <item>10 pm</item>
+        <item>11 pm</item>
+        <item>12 pm</item>
+    </string-array>
+
+    <string-array name="alert_array">
+        <item>1 hr</item>
+        <item>2 hrs</item>
+        <item>3 hrs</item>
+        <item>4 hrs</item>
+        <item>6 hrs</item>
+        <item>8 hrs</item>
+        <item>12 hrs</item>
+        <item>18 hrs</item>
+        <item>1 day</item>
+        <item>1.5 ds</item>
+        <item>2 days</item>
+        <item>3 days</item>
+        <item>4 days</item>
+        <item>1 week</item>
+        <item>1.5 w</item>
+        <item>2 wks</item>
+        <item>3 wks</item>
+        <item>1 mnth</item>
+        <item>never</item>
+    </string-array>
+
+    <!--<string-array name="name_array">-->
+        <!--<item>Grandparent</item>-->
+        <!--<item>Daddy</item>-->
+        <!--<item>Aristophanus</item>-->
+        <!--<item>Mom</item>-->
+    <!--</string-array>-->
+
+</resources>

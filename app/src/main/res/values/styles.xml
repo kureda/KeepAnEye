@@ -1,0 +1,283 @@
+<resources>
+    <!--Launcher theme-->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+
+    <!--Themes for installation screens-->
+    <style name="InstallationTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/red500</item>
+        <item name="colorPrimaryDark">@color/red700</item>
+        <item name="colorAccent">@color/amberA200</item>
+        <item name="android:textColorPrimary">@color/blue100</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorButtonNormal">@color/amberA200</item>"
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="InstallationTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:titleTextStyle">@dimen/text_size</item>
+    </style>
+
+    <style name="InstallationTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorPrimary">@color/red500</item>
+    </style>
+
+    <!--for all toolbars-->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <!--<item name="android:titleTextStyle">@dimen/text_size</item>-->
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+
+    <style name="InstallationTextTheme" parent="InstallationTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginBottom">-10dp</item>
+        <item name="android:lineSpacingExtra">@dimen/line_spacing_extra</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CaredMainText" parent="InstallationTextTheme">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="InstallationButton" parent="InstallationTextTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/v_button_margin</item>
+        <item name="android:layout_marginLeft">@dimen/h_button_margin</item>
+        <item name="android:layout_marginRight">@dimen/h_button_margin</item>
+        <item name="android:layout_marginBottom">@dimen/v_button_margin</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <!--Themes for cared screens-->
+    <style name="CaredTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/amber500</item>
+        <item name="colorPrimaryDark">@color/orange900</item>
+        <!--<item name="colorPrimaryDark">#BF360C</item>-->
+        <item name="colorAccent">@color/blueA200</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/amber700</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+
+    <style name="CaredTheme.NoActionBar" parent="CaredTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CaredLabel" parent="CaredTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CaredTextEdit" parent="CaredTheme">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="CaredConfigRow" parent="CarerTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:weightSum">@integer/cared_row_width_total</item>
+    </style>
+
+    <style name="CaredTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:titleTextStyle">@dimen/text_size</item>
+    </style>
+
+    <style name="CaredTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:titleTextStyle">@dimen/text_size</item>
+    </style>
+
+
+    <style name="cared_fab" parend="CaredTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/fab_margin</item>
+    </style>
+
+    <!--Themes for carer screens-->
+    <style name="CarerTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue500</item>
+        <item name="colorPrimaryDark">@color/blue700</item>
+        <item name="colorAccent">@color/blue700</item>
+        <item name="android:textSize">@dimen/config_text_size</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:windowBackground">@color/blue100</item>
+        <!--<item name="android:windowBackground">@color/blue100</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Carer.Config" parent="CarerTheme">
+        <item name="colorAccent">@color/orangeA200</item>
+        <item name="android:textColorPrimary">@color/blue700</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <!--<item name="android:windowBackground">@color/blue100</item>-->
+    </style>
+
+    <style name="Carer.Config.Screen" parent="Carer.Config">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">@dimen/config_padding</item>
+        <item name="android:layout_marginTop">@dimen/config_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/config_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/config_side_margin</item>
+        <item name="android:layout_marginRight">@dimen/config_side_margin</item>
+    </style>
+
+    <style name="Carer.Config.Control" parent="Carer.Config">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <!--<item name="android:textColor">@color/black</item>-->
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="Carer.Config.Control.Row" parent="Carer.Config.Control">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:background">@color/silver</item>
+    </style>
+
+    <style name="Carer.Config.Control.Spinner.Hours" parent="Carer.Config.Control">
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:entries">@array/hour_array</item>
+    </style>
+
+    <style name="Carer.Config.Control.Spinner.Alert" parent="Carer.Config.Control.Spinner.Hours">
+        <item name="android:entries">@array/alert_array</item>
+    </style>
+
+    <!--underlying frame under a spinner, to imitate tint-->
+    <style name="Carer.Config.Control.TintRed" parent="Carer.Config.Control">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@color/red500</item>
+    </style>
+
+    <!--underlying frame under a spinner, to imitate tint-->
+    <style name="Carer.Config.Control.TintYellow" parent="Carer.Config.Control">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@color/amber500</item>
+    </style>
+
+    <style name="Carer.Config.Label" parent="Carer.Config">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/blue700</item>
+    </style>
+
+    <style name="Carer.Config.Label.Fill" parent="Carer.Config.Label">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Carer.Config.Control.TextField" parent="Carer.Config.Control">
+        <item name="android:background">@color/silver</item>
+        <item name="android:textColor">@color/blue700</item>
+        <item name="android:imeOptions">flagNoExtractUi</item>
+    </style>
+
+    <style name="CarerTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:titleTextStyle">@dimen/text_size</item>
+        <item name="android:textColorPrimary">@color/blue100</item>
+    </style>
+
+    <style name="CarerTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <!--<item name="android:titleTextStyle">@dimen/text_size</item>-->
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="Carer.Row" parent="CarerTheme">
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <!--<item name="android:layout_margin">0dp</item>-->
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Carer.Row.Subrow" parent="Carer.Row">
+        <!--<item name="android:layout_margin">2dp</item>-->
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@color/greenA400</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="carer_button" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="carer_config_button" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/cancelsave_btn_top_margin</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:tint">@color/orangeA200</item>
+    </style>
+
+</resources>

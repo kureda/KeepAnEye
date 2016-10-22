@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="v_button_margin">4dp</dimen>
+    <dimen name="h_button_margin">4dp</dimen>
+    <dimen name="fab_margin">8dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="layout_margin_top_for_text1">-20sp</dimen>
+    <dimen name="line_spacing_extra">-5sp</dimen>
+    <dimen name="carer_row_margin">0dp</dimen>
+    <integer name="cared_row_width_total">2</integer>
+    <dimen name="action_button_min_width">56dp</dimen>
+    <dimen name="indeterminate_progress_size">32dp</dimen>
+    <dimen name="padding_before_carer_name">4dp</dimen>
+    <dimen name="carer_row_top_margin">4dp</dimen>
+    <dimen name="carer_row_side_margin">4dp</dimen>
+    <dimen name="carer_distance_between_rows">8dp</dimen>
+    <dimen name="title_text_size">20sp</dimen>
+    <integer name="screen_orientation">1</integer> <!-- 0 is horisontal, 1 is vertical -->
+    <dimen name="config_vertical_margin">0dp</dimen>
+    <dimen name="config_side_margin">0dp</dimen>
+    <dimen name="config_padding">8dp</dimen>
+    <dimen name="config_text_size">15sp</dimen>
+    <dimen name="cancelsave_btn_top_margin">8dp</dimen>
+</resources>
