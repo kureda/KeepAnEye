@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/carer_main_menu_refresh"
+        android:icon="@android:drawable/ic_popup_sync"
+        android:orderInCategory="1"
+        android:title="@string/description_refresh"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/carer_main_menu_edit"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:orderInCategory="2"
+        android:title="@string/description_edit"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/carer_main_menu_show_id"
+        android:orderInCategory="2"
+        android:title="@string/description_show_id"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/carer_main_menu_edit_id"
+        android:orderInCategory="2"
+        android:title="@string/description_edit_id"
+        app:showAsAction="never" />
+</menu>

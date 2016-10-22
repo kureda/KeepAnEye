@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="config_side_margin">120dp</dimen>
+    <dimen name="config_padding">40dp</dimen>
+    <dimen name="config_vertical_margin">40dp</dimen>
+</resources>

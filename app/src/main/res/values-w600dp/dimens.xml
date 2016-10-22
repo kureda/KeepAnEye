@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="carer_row_top_margin">20dp</dimen>
+    <dimen name="carer_row_side_margin">60dp</dimen>
+    <integer name="screen_orientation">0</integer> <!-- 0 is horisontal, 1 is vertical -->
+</resources>

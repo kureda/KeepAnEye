@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="config_side_margin">200dp</dimen>
+    <dimen name="config_padding">60dp</dimen>
+    <dimen name="config_vertical_margin">60dp</dimen>
+    <dimen name="config_text_size">20sp</dimen>
+</resources>

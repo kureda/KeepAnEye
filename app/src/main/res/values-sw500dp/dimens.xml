@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="v_button_margin">16dp</dimen>
+    <dimen name="h_button_margin">16dp</dimen>
+    <dimen name="text_size">28sp</dimen>
+    <dimen name="line_spacing_extra">-9dp</dimen>
+
+    <dimen name="config_side_margin">40dp</dimen>
+    <dimen name="config_padding">40dp</dimen>
+    <dimen name="config_vertical_margin">40dp</dimen>
+    <dimen name="config_text_size">20sp</dimen>
+</resources>

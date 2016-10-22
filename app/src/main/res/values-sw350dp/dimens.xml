@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="v_button_margin">12dp</dimen>
+    <dimen name="h_button_margin">12dp</dimen>
+    <dimen name="text_size">22sp</dimen>
+    <dimen name="line_spacing_extra">-8dp</dimen>
+    <dimen name="carer_distance_between_rows">16dp</dimen>
+
+    <dimen name="config_side_margin">0dp</dimen>
+    <dimen name="config_padding">16dp</dimen>
+    <dimen name="config_vertical_margin">0dp</dimen>
+    <dimen name="config_text_size">16sp</dimen>
+    <dimen name="cancelsave_btn_top_margin">30dp</dimen>
+</resources>
