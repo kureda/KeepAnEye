@@ -12,7 +12,9 @@ import com.kureda.android.keepaneye.both.ui.App;
 import com.kureda.android.keepaneye.both.util.Util;
 
 import java.io.Serializable;
+import java.util.Calendar;
 
+import static com.kureda.android.keepaneye.R.string.hour;
 import static com.kureda.android.keepaneye.carer.db.CaredDbContract.Entry.COLUMN_NAME_AVATAR;
 import static com.kureda.android.keepaneye.carer.db.CaredDbContract.Entry.COLUMN_NAME_DELETED;
 import static com.kureda.android.keepaneye.carer.db.CaredDbContract.Entry.COLUMN_NAME_ENTRY_ID;
@@ -55,6 +57,7 @@ public class Cared implements Serializable {
     public static final int UNKNOWN = 0, GREEN = 1, YELLOW = 2, RED = 3;
     private static String mMinute = "m", mHour = "h", mDay = "d", mWeek = "w", mMonth = "M",
             mYear = "Y";
+    //sleep an wake - in hours. The rest in minutes
     public int dbId, avatar, report, log, walk, ride, sleep, wake, reportYellow,
             reportRed, logYellow, logRed, walkYellow, walkRed, rideYellow, rideRed;
     public String phoneId, name, phone;
@@ -72,7 +75,7 @@ public class Cared implements Serializable {
         if (context != null) {
             mContext = context;
             mMinute = mContext.getString(R.string.minute);
-            mHour = mContext.getString(R.string.hour);
+            mHour = mContext.getString(hour);
             mDay = mContext.getString(R.string.day);
             mWeek = mContext.getString(R.string.week);
             mWeek = mContext.getString(R.string.month);
@@ -82,7 +85,7 @@ public class Cared implements Serializable {
 
     public static int getColor(int i, boolean greenBecomesTransparent) {
         Context context = App.getContext();
-         if (i == RED)
+        if (i == RED)
             return ContextCompat.getColor(context, R.color.red);
         if (i == YELLOW)
             return ContextCompat.getColor(context, R.color.orange);
@@ -94,6 +97,10 @@ public class Cared implements Serializable {
             }
         }
         return ContextCompat.getColor(context, R.color.white); //unknown
+    }
+
+    private static int max(int a, int b, int c, int d) {
+        return Math.max(Math.max(Math.max(a, b), c), d);
     }
 
     public int getIcon() {
@@ -155,7 +162,6 @@ public class Cared implements Serializable {
 
     private void populateAllViews() {
         mNow = Util.now();
-        //mView.setVisibility(deleted ? View.GONE : View.VISIBLE);//hide the row?
         mAvatarView.setImageResource(AVATARS[avatar]);
         mNameView.setText(name);
         mReportView.setText(ago(report));
@@ -181,6 +187,8 @@ public class Cared implements Serializable {
      * @return summary color (the worst color code of all activities)
      */
     public int calculateColorCodes() {
+        if (mNow == 0)
+            mNow = Util.now();
         mReportColor = calculateColorCode(report, reportYellow, reportRed);
         mLogColor = calculateColorCode(log, logYellow, logRed);
         mWalkColor = calculateColorCode(walk, walkYellow, walkRed);
@@ -191,32 +199,70 @@ public class Cared implements Serializable {
 
     //package access - for running unit tests
     public int calculateColorCode(int value, int yellowThreshold, int redThreshold) {
-        if (mNow == 0)
-            mNow = Util.now();
         if (value == 0)
             return 0; //no info yet
-        int ago = mNow - value;
-        if (ago >= redThreshold)
+        int ago = howLongAgo(value);
+        if (ago >= redThreshold) {
             return RED;
+        }
         if (ago >= yellowThreshold)
             return YELLOW;
         return GREEN;
     }
 
-    private int max(int a, int b, int c, int d) {
-        return Math.max(Math.max(Math.max(a, b), c), d);
+    /**
+     * How many minutes ago is the timestamp happened (at waking time only).
+     *
+     * @param timestamp time when an event happened, in minutes
+     * @return distance (in minutes) between timestamp and now, or (if it is sleeping time now),
+     * between timestamp and bedtime
+     */
+    public int howLongAgo(int timestamp) {
+        int result = mNow - timestamp;
+        int mins = getMinutesSinceMidnight();
+        if (isSleeping(mins)) {
+            result = getBedTimeInGmt(mins) - timestamp;
+        }
+        return result;
     }
 
+    private int getMinutesSinceMidnight() {
+        Calendar midnight = Calendar.getInstance();
+        midnight.set(Calendar.HOUR_OF_DAY, 0);
+        midnight.set(Calendar.MINUTE, 0);
+        midnight.set(Calendar.SECOND, 0);
+        midnight.set(Calendar.MILLISECOND, 0);
+        Calendar now = Calendar.getInstance();
+        long diff = now.getTimeInMillis() - midnight.getTimeInMillis();
+        return (int) (diff / 60000);
+    }
+
+    //return GMT, in minutes, of latest bedtime
+    public int getBedTimeInGmt(int minSinceMidnight) {
+        int nowInGmt = Util.now();
+        int hrSinceMidnight = minSinceMidnight / 60;
+        int hrsSinceBedtime = (hrSinceMidnight + 24 - sleep) % 24;
+        return (nowInGmt - 60 * hrsSinceBedtime);
+    }
+
+    public boolean isSleeping(int minSinceMidnight) {
+        int hrSinceMidnight = minSinceMidnight / 60;
+        if (sleep > wake) { //sleeping at midnight
+            return hrSinceMidnight >= sleep || hrSinceMidnight < wake;
+        } else { //awake at midnight
+            return hrSinceMidnight >= sleep && hrSinceMidnight <= wake;
+        }
+    }
 
     /**
      * Convert time to string presentation, in how many hours/days ago it was
      *
-     * @param when time in GMT
+     * @param when time in GMT, in minutes
      * @return somethingl like "1h", "5d" or "?" if input was 0
      */
     private String ago(int when) {
         if (when == 0 || when > mNow) {
-             return "??";
+            return "??";
         }
         int minutesAgo = mNow - when;
         if (minutesAgo < 100)
@@ -236,5 +282,4 @@ public class Cared implements Serializable {
         int yearsAgo = daysAgo / 365;
         return yearsAgo + mYear;
     }
-
 }

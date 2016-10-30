@@ -31,7 +31,7 @@
             app:srcCompat="@drawable/ic_carer1"
             tools:ignore="ContentDescription" />
 
-        <TextView
+        <com.kureda.android.keepaneye.both.util.FontTextView
             android:id="@+id/text1"
             style="@style/InstallationTextTheme"
             android:layout_width="wrap_content"
@@ -39,7 +39,8 @@
             android:layout_below="@+id/carer1"
             android:layout_marginTop="@dimen/layout_margin_top_for_text1"
             android:alpha="0"
-            android:background="@color/blue500"
+            android:gravity="center"
+            android:textColor="@color/blue700"
             android:text="@string/are_you_carer" />
 
         <ImageView
@@ -53,7 +54,7 @@
             app:srcCompat="@drawable/ic_cared1"
             tools:ignore="ContentDescription" />
 
-        <TextView
+        <com.kureda.android.keepaneye.both.util.FontTextView
             android:id="@+id/text2"
             style="@style/InstallationTextTheme"
             android:layout_width="wrap_content"
@@ -62,7 +63,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:alpha="0"
-            android:background="@color/amber900"
+            android:gravity="center"
+            android:textColor="@color/amber900"
             android:text="@string/are_u_cared" />
 
     </RelativeLayout>

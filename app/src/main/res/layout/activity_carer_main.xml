@@ -19,8 +19,21 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/InstallationTheme.PopupOverlay"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
-
     </android.support.design.widget.AppBarLayout>
 
+    <com.kureda.android.keepaneye.both.util.FontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@drawable/ic_shadow"
+        android:drawableRight="@drawable/ic_shadow"
+        android:layout_gravity="bottom|end"
+        android:gravity="bottom|end"
+        android:textColor="@color/blue100"
+        android:text="@string/background_text"
+        android:textSize="56sp"
+        android:padding="30dp"
+        />
+
     <include layout="@layout/content_carer_main" />
+
 </android.support.design.widget.CoordinatorLayout>

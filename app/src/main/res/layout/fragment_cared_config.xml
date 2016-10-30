@@ -48,7 +48,8 @@
 
             <TextView
                 style="@style/CaredLabel"
-                android:text="@string/txt_phone" />
+                android:text="@string/txt_phone"
+                />
 
             <EditText
                 android:id="@+id/phone_entry_field"

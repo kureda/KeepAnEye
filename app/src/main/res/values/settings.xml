@@ -1,5 +1,5 @@
 <resources>
-    <integer name="activity_log_interval">60</integer> <!-- in seconds. Make it 15*60 -->
-    <integer name="activity_upload_interval">120</integer> <!-- in seconds. Make it 2*60*60 -->
-    <integer name="activity_download_interval">3600</integer> <!--in sec. Make it 2 hr(min is 1)-->
+    <integer name="activity_log_interval">900</integer> <!-- in seconds. -->
+    <integer name="activity_upload_interval">3600</integer> <!-- in seconds. -->
+    <integer name="activity_download_interval">3600</integer> <!--in seconds -->
 </resources>

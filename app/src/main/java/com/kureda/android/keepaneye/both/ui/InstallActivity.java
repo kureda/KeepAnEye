@@ -77,7 +77,7 @@ public class InstallActivity extends AppCompatActivity {
         text1.animate().setStartDelay(ANIMA_INTERVAL).setDuration(ANIM_DURATION).alpha(1);
         image2.animate().setStartDelay(ANIMA_INTERVAL * 2).setDuration(ANIM_DURATION).alpha(1);
         text2.animate().setStartDelay(ANIMA_INTERVAL * 3).setDuration(ANIM_DURATION).alpha(1);
-        oldView.animate().setStartDelay(ANIMA_INTERVAL * 4).setDuration(ANIM_DURATION).alpha(0);
-        newView.animate().setStartDelay(ANIMA_INTERVAL * 4).setDuration(ANIM_DURATION * 2).alpha(1);
+        oldView.animate().setStartDelay(ANIMA_INTERVAL * 5).setDuration(ANIM_DURATION).alpha(0);
+        newView.animate().setStartDelay(ANIMA_INTERVAL * 5).setDuration(ANIM_DURATION * 2).alpha(1);
     }
 }

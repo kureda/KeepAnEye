@@ -88,7 +88,7 @@
 
                         <TextView
                             style="@style/Carer.Config.Label"
-                            android:text="@string/label_choose_wake" />
+                            android:text="@string/label_choose_sleep" />
 
                         <Spinner
                             android:id="@+id/conf_sleep"
@@ -105,7 +105,7 @@
 
                         <TextView
                             style="@style/Carer.Config.Label"
-                            android:text="@string/label_choose_sleep" />
+                            android:text="@string/label_choose_wake" />
 
                         <Spinner
                             android:id="@+id/conf_wake"

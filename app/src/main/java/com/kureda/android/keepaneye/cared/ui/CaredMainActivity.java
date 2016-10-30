@@ -12,7 +12,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -136,7 +135,7 @@ public class CaredMainActivity extends AppCompatActivity {
 
     private void displayAppState() {
         String text = "";
-        int color = ContextCompat.getColor(this, R.color.white);
+        int color = ContextCompat.getColor(this, R.color.green700);
         if (!Internet.isConnected()) {
             text = getString(R.string.cared_no_internet);
             color = ContextCompat.getColor(this, R.color.red);
@@ -146,11 +145,17 @@ public class CaredMainActivity extends AppCompatActivity {
                 text = getString(R.string.carer_not_yet_reported);
             } else {
                 int ago = Util.now() - Integer.parseInt(lastTime);
-                text = getResources().getQuantityString(R.plurals.cared_last_report_was, ago, ago);
+                if(ago==0) {
+                    text = getString(R.string.cared_last_report_just_now);
+                }else{
+                    text = getResources().getQuantityString(R.plurals.cared_last_report_was, ago, ago);
+                }
             }
         }
+        mMainText.setAlpha(0.0f);
         mMainText.setText(text);
         mMainText.setTextColor(color);
+        mMainText.animate().setStartDelay(1000L).setDuration(1000L).alpha(1.0f).start();
     }
 
 

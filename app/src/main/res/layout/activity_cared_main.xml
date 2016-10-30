@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +11,7 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/InstallationTheme.AppBarOverlay">
+        android:theme="@style/CaredTheme">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -27,16 +28,16 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom|end"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:orientation="horizontal"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:padding="@dimen/activity_vertical_margin">
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/cared_fab_call"
             style="@style/cared_fab"
             android:onClick="makePhoneCallToCarer"
+            android:tint="@android:color/white"
             app:srcCompat="@drawable/ic_call_black_24dp" />
-
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

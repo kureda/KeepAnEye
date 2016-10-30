@@ -18,9 +18,11 @@
         android:layout_centerHorizontal="true"
         android:orientation="vertical">
 
-        <TextView
+        <com.kureda.android.keepaneye.both.util.FontTextView
             android:id="@+id/cared_main_text"
             style="@style/CaredMainText"
+            android:background="@color/transparent"
+            android:layout_margin="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"

@@ -1,7 +1,8 @@
 <resources>
     <dimen name="v_button_margin">12dp</dimen>
     <dimen name="h_button_margin">12dp</dimen>
-    <dimen name="text_size">22sp</dimen>
+    <dimen name="text_size">26sp</dimen>
+    <dimen name="label_size">23sp</dimen>
     <dimen name="line_spacing_extra">-8dp</dimen>
     <dimen name="carer_distance_between_rows">16dp</dimen>
 
@@ -10,4 +11,5 @@
     <dimen name="config_vertical_margin">0dp</dimen>
     <dimen name="config_text_size">16sp</dimen>
     <dimen name="cancelsave_btn_top_margin">30dp</dimen>
+    <dimen name="cared_message_size">38sp</dimen>
 </resources>

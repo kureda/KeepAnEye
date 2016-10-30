@@ -95,7 +95,6 @@ public class FormValidator implements Form {
             } else if (mType == SHORT_NAME) {
                 mValid = (string.length() < mLength)
                         && (string.length() > 1
-                        && string.matches("[a-zA-Z]+")
                 );
             } else if (mType == PHONE) {
                 mValid = (string.length() >= mLength);

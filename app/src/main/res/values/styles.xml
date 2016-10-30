@@ -11,7 +11,7 @@
         <item name="colorAccent">@color/amberA200</item>
         <item name="android:textColorPrimary">@color/blue100</item>
         <item name="android:windowBackground">@color/white</item>
-        <item name="android:colorBackground">@color/white</item>
+        <item name="android:colorBackground">@color/yellow500</item>
         <item name="colorButtonNormal">@color/amberA200</item>"
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -31,21 +31,25 @@
 
     <!--for all toolbars-->
     <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <!--<item name="android:titleTextStyle">@dimen/text_size</item>-->
         <item name="android:textSize">@dimen/title_text_size</item>
     </style>
 
     <style name="InstallationTextTheme" parent="InstallationTheme">
         <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/transparent</item>
         <item name="android:layout_marginBottom">-10dp</item>
         <item name="android:lineSpacingExtra">@dimen/line_spacing_extra</item>
+        <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">10dp</item>
         <item name="android:paddingLeft">8dp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
     <style name="CaredMainText" parent="InstallationTextTheme">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/cared_message_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/yellow500</item>
+
     </style>
 
     <style name="InstallationButton" parent="InstallationTextTheme">
@@ -56,20 +60,24 @@
         <item name="android:layout_marginLeft">@dimen/h_button_margin</item>
         <item name="android:layout_marginRight">@dimen/h_button_margin</item>
         <item name="android:layout_marginBottom">@dimen/v_button_margin</item>
-        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:color">@color/white</item>
+        <item name="android:background">@color/white</item>
     </style>
 
     <!--Themes for cared screens-->
     <style name="CaredTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/amber500</item>
-        <item name="colorPrimaryDark">@color/orange900</item>
+        <!--<item name="colorPrimary">@color/amber500</item> -->
+        <item name="colorPrimary">@color/yellow500</item>
+        <item name="colorPrimaryDark">@color/yellow700</item>
         <!--<item name="colorPrimaryDark">#BF360C</item>-->
-        <item name="colorAccent">@color/blueA200</item>
-        <item name="android:textColorPrimary">@color/white</item>
-        <item name="android:windowBackground">@color/amber700</item>
+        <item name="colorAccent">@color/green700</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorPrimary">@color/green700</item>
+        <!--<item name="android:windowBackground">@color/amber700</item>-->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:colorBackground">@color/white</item>
+        <item name="android:colorBackground">@color/silver</item>
     </style>
 
     <style name="CaredTheme.NoActionBar" parent="CaredTheme">
@@ -83,10 +91,11 @@
         <item name="android:layout_margin">8dp</item>
         <item name="android:padding">0dp</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:gravity">right</item>
-        <item name="android:textSize">@dimen/text_size</item>
-        <item name="android:maxLines">1</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">right|top</item>
+        <item name="android:layout_gravity">right|top</item>
+        <item name="android:textSize">@dimen/label_size</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="CaredTextEdit" parent="CaredTheme">
@@ -97,8 +106,9 @@
         <item name="android:padding">4dp</item>
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:maxLines">1</item>
+        <item name="android:layout_gravity">center</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/yellow500</item>
     </style>
 
     <style name="CaredConfigRow" parent="CarerTheme">
@@ -130,7 +140,7 @@
         <item name="colorAccent">@color/blue700</item>
         <item name="android:textSize">@dimen/config_text_size</item>
         <item name="android:textColorPrimary">@color/black</item>
-        <item name="android:windowBackground">@color/blue100</item>
+        <item name="android:windowBackground">@color/white</item>
         <!--<item name="android:windowBackground">@color/blue100</item>-->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -238,9 +248,9 @@
     <style name="Carer.Row" parent="CarerTheme">
         <item name="android:padding">0dp</item>
         <item name="android:layout_marginTop">0dp</item>
-        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginRight">8dp</item>
         <item name="android:layout_marginBottom">2dp</item>
-        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
         <!--<item name="android:layout_margin">0dp</item>-->
         <item name="android:background">@color/white</item>
         <item name="android:layout_width">wrap_content</item>
@@ -279,5 +289,4 @@
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:tint">@color/orangeA200</item>
     </style>
-
 </resources>

@@ -3,9 +3,11 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_carer_main">Keep An Eye</string>
     <string name="title_activity_cared_main">Keep An Eye</string>
-    <string name="choose_a_mode">Choose what your phone will do:</string>
-    <string name="show_what_mom_do">CARER MODE:\n\nIt\'ll show what your mom\'s doing.</string>
-    <string name="report_what_u_do">CARED MODE:\n\nIt\'ll tell your daughter what you\'re doing.</string>
+    <string name="choose_a_mode"> What your phone will do?</string>
+    <string name="show_what_mom_do"><big>Observe</big>\n\nShow you what your
+        mom\'s doing.</string>
+    <string name="report_what_u_do"><big>Report</big>\n\nTell your daughter what
+        you\'re doing.</string>
     <string name="are_you_carer">Want to be sure\nthat your mom\'s OK?</string>
     <string name="are_u_cared">Want your dauther\nto know that you\'re OK?</string>
     <string name="title_activity_cared_config">Your details</string>
@@ -25,10 +27,10 @@
         <item quantity="other">Delete %d digits</item>
     </plurals>
     <plurals name="cared_last_report_was">
-        <item quantity="zero">Last report was send less than a minute ago.</item>
         <item quantity="one">Last report was send one minute ago.</item>
         <item quantity="other">Last report was send %1$d minutes ago.</item>
     </plurals>
+    <string name="cared_last_report_just_now">Last report was send less than a minute ago.</string>
     <string name="less">Too long</string>
     <string name="more">Too short or start from space</string>
     <string name="must_be_phone">Should be longer</string>
@@ -69,8 +71,8 @@
     <string name="show">Show? </string>
     <string name="hide">Hide</string>
     <string name="label_phone_number">Phone:</string>
-    <string name="cared_no_internet">No internet connection. Cannot send reports. Please connect
-        to the internet (WiFi or something).</string>
+    <string name="cared_no_internet">No internet connection.\nCannot send reports.\nPlease connect
+        to the internet\n(WiFi or something).</string>
     <string name="carer_not_yet_reported">No reports sent yet.\n\n</string>
     <string name="cared_fix_phone_number">Please go to settings and enter valid phone number.</string>
     <string name="this_is_not_phone">You can\'t call from tablet!</string>
@@ -93,4 +95,6 @@
     <string name="must_sb_btn">mSubmitButton is compulsory.</string>
     <string name="too_long_mjson_id_string">Too long myjson id string:</string>
     <string name="is_not_character">cannot be converted to a character.</string>
+    <string name="background_text">Keep An Eye</string>
+    <string name="font_family">fonts/Unkempt-Regular.ttf</string>
 </resources>

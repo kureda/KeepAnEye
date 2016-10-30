@@ -4,13 +4,19 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="transparent">#0000</color>
+    <color name="translucent">#bfff</color>
     <color name="silver">#F0F0F0</color>
+    <color name="green500">#4CAF50</color>
     <color name="green700">#388E3C</color>
     <color name="amberA200">#FFD740</color>
     <color name="red500">#F44336</color>
     <color name="red700">#D32F2F</color>
 
     <!--cared theme-->
+
+
+    <color name="yellow500">#FFEB3B</color>
+    <color name="yellow700">#FBC02D</color>
     <color name="amber500">#FFC107</color>
     <color name="amber700">#FFA000</color>
     <color name="amber900">#FF6F00</color>
