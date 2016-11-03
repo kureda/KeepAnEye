@@ -1,39 +1,23 @@
 # KeepAnEye
-This is the final project for the udacity&Google 1-year Android training.
 
-The app described in Project 7 (https://github.com/kureda/Capstone-Project/blob/master/Capstone_Stage1.pdf)
-The idea is to monitor your relatives. If you granny's not using her phone for a while or not walking/riding
-with it for a while, your phone warns you: the widget (picture of old lady) turnes yellow and then red.
+This is an supportive care app. Install it on an smarphone(s) of your elderly relative(s) and it will monitor their activity. If they not doing their usual activity (using phone, walking etc) for too long, the app will tell you.
 
-What's different:
+## Installation
 
-1. The used 3-rd pary library is not synergy, but OKHttp
+1. Install it on your smarpthone. It will register itself on the cloud and will generate your KeepAnEye id number.
+2. In widgets, find and put on your main screen the picture of an old lady. It is the major indicator.
+3. Install the app on smartphones of persons you want to monitor. Use the id number from the step one.
+4. Open the app on your smartphone (by taping the picture of old lady) and you'll see the reports from other smarthones.
+5. Configure settings for every "monitored" person.
 
-2. The used Google service is not Firebase Messaging, but Firebase analytics
+That's it! Now just pay attention to the picture of old lady. If it is transparent, everything is OK. If it turns yellow or red, tap the picture to find out the details and tap the phone picture to give them a call. 
 
-3. Sleep-wake time feature. You can set go-to-bed and wake time, but they are just ignored.
+## Changing list of monitored person
 
-For the app you need passwords for google services etc, I'll send reference to them separately.
-To test the app, you need at least two smarthones.
+* When you install the app on a phone and enter your KeepAnEye id, the report will appear on your phone. Go to settings and choose settings for this person.
+* To stop displaying the person, turn the "display?" toggle switch on the settings.
+* To observe the same group of persons from other phone, install the app in observer mode and change the KeepAnEyeId to the original one.
+* To obseve the different group of persons, change the KeepAnEye id in settings of your phone. People from previous group will still be displayed, but reports won't be updated for them. You can hide them using settings.
 
-1. Install it in the 'carer' mode. It'll give you an id
 
-2. Drag widget to the screen. It should be transparent picture of old lady.
-
-2. Install it to other smartphone, in 'cared' mode, using id from step one.
-
-3. Wait till the cared phone uploads report. (at real life it would be an hour, but for testing I set it to 2 minutes)
-
-4. Wait till the carer phone downloads the report. Since miminum allowed by Google is 1 hr, you better do it manually,
-by touching the sync icon on the toolbar.
-
-5. Cared phone information will appear. You can go to settings, change details etc. Depending on settings and the report
-from your 'cared' smartphone, widget with the old lady will  turn yellow or green.
-
-6. You can call from phone to phone by pressing corresponding buttons. 
-
-7. Cared phone should keep sending reports even after reboot.
-
-8. Change KeepAnEyeId in 'carer' phone to 62276370. You will see three more 'cared' phones (those are mine). Old ones still would be displayed, but their state won't be updated. I don'd delete database records, just hide them (by switch in settings).
-
-That's about it. Enjoy. :)
+That's about it. If any problems, email me.
