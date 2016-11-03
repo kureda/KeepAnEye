@@ -12,7 +12,7 @@ This is an supportive care app. Install it on an smarphone(s) of your elderly re
 
 That's it! Now just pay attention to the picture of old lady. If it is transparent, everything is OK. If it turns yellow or red, tap the picture to find out the details and tap the phone picture to give them a call. 
 
-# Changing list of monitored person
+## Changing list of monitored person
 
 * When you install the app on a phone and enter your KeepAnEye id, the report will appear on your phone. Go to settings and choose settings for this person.
 * To stop displaying the person, turn the "display?" toggle switch on the settings.
