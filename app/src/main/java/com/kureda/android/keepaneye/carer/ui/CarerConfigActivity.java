@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -44,13 +43,9 @@ public class CarerConfigActivity extends AppCompatActivity implements AdapterVie
             mRideYellowSpinner, mRideRedSpinner;
     private android.support.v7.widget.SwitchCompat mHideSwitch;
     private EditText mPhoneText;
-    //    private Button mCancelButton;
-//    private View mRowAll;
-    private View[] mAllControls;
     private Cared mCared = null;
     private int mCaredIndex = 0;
     private int mSkipOnItemSelected = 0;
-    //   private Menu mMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +61,10 @@ public class CarerConfigActivity extends AppCompatActivity implements AdapterVie
 
     private void restoreFromBundle(Bundle savedInstanceState) {
         if (savedInstanceState != null) {
-            mCared = (Cared) savedInstanceState.getSerializable(CARED);
+            Object cared = savedInstanceState.getSerializable(CARED);
+            if(cared!=null) {
+                mCared = (Cared) savedInstanceState.getSerializable(CARED);
+            }
             mCaredIndex = savedInstanceState.getInt(CARED_INDEX);
             mSkipOnItemSelected = 2;//after screen rotation onItemSelected() is called twice.
         }
@@ -75,8 +73,10 @@ public class CarerConfigActivity extends AppCompatActivity implements AdapterVie
     @Override
     public void onSaveInstanceState(Bundle bundle) {
         bundle.putInt(CARED_INDEX, mCaredIndex);
-        readControlsToCared();
-        bundle.putSerializable(CARED, mCared); //Performance, I know. But no boilerplate code :)
+        if(mCared!=null) {
+            readControlsToCared();
+            bundle.putSerializable(CARED, mCared); //Performance, I know. But no boilerplate code :)
+        }
         super.onSaveInstanceState(bundle);
     }
 
@@ -151,24 +151,11 @@ public class CarerConfigActivity extends AppCompatActivity implements AdapterVie
 
         mHideSwitch = (SwitchCompat) findViewById(R.id.conf_hidden);
         mPhoneText = (EditText) findViewById(R.id.conf_phone);
-        //       mCancelButton = (Button) findViewById(R.id.btn_carer_cancel);
-        Button saveButton = (Button) findViewById(R.id.btn_carer_save);
-
-        //       mRowAll = findViewById(R.id.conf_row_all);
-
-//        mAllControls = new View[]{
-//                mCaredSpinner, mAvatarSpinner, mSleepSpinner, mWakeSpinner, mReportYellowSpinner,
-//                mReportRedSpinner, mLoginYellowSpinner, mLoginRedSpinner, mWalkYellowSpinner,
-//                mWalkRedSpinner, mRideYellowSpinner, mRideRedSpinner, mPhoneText,
-//                mCancelButton, saveButton};
     }
 
     private void fillAllControls(Cared cared) {
-        //       mCaredSpinner.setSelection(0, true);
-//        int selection = getSelectionNumber(cared.);
         mHideSwitch.setChecked(!cared.deleted);
         mPhoneText.setText(cared.phone);
-//        int icon = cared.getIcon();
         mAvatarSpinner.setSelection(cared.avatar, true);
         mSleepSpinner.setSelection(Util.hoursToIndex(cared.sleep), true);
         mWakeSpinner.setSelection(Util.hoursToIndex(cared.wake), true);
@@ -185,7 +172,9 @@ public class CarerConfigActivity extends AppCompatActivity implements AdapterVie
 
     public void cancel(View view) {
         mCared = (Cared) mCaredSpinner.getSelectedItem();
-        fillAllControls(mCared);
+        if(mCared!=null) {
+            fillAllControls(mCared);
+        }
     }
 
     private void setCaredDropdown(Cared[] careds) {
@@ -216,14 +205,14 @@ public class CarerConfigActivity extends AppCompatActivity implements AdapterVie
     }
 
     public void save(View view) {
-        int currentIndex = mCaredSpinner.getSelectedItemPosition();
-        readControlsToCared();
-        saveToDatabase();
-        //fillDropdownFromDatabase();
-        //mCaredSpinner.setSelection(currentIndex);
+        if (mCared != null) {
+            readControlsToCared();
+            saveToDatabase();
+        }
     }
 
-    private void saveToDatabase() {
+    private int saveToDatabase() {
+        if(mCared==null) return 0;//nothing to save
         final ContentResolver cr = this.getContentResolver();
         String id = Integer.toString(mCared.dbId);
         Uri uri = CaredDbContract.Entry.CONTENT_URI.buildUpon().appendPath(id).build();
@@ -241,8 +230,8 @@ public class CarerConfigActivity extends AppCompatActivity implements AdapterVie
         values.put(CaredDbContract.Entry.COLUMN_NAME_WALK_RED, mCared.walkRed);
         values.put(CaredDbContract.Entry.COLUMN_NAME_RIDE_YELLOW, mCared.rideYellow);
         values.put(CaredDbContract.Entry.COLUMN_NAME_RIDE_RED, mCared.rideRed);
-        int n = cr.update(uri, values, null, null);
-     }
+        return cr.update(uri, values, null, null);
+    }
 
 }
 
