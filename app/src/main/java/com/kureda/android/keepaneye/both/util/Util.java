@@ -1,5 +1,6 @@
 package com.kureda.android.keepaneye.both.util;
 
+import android.util.Log;
 import android.widget.Toast;
 
 import com.kureda.android.keepaneye.both.ui.App;
@@ -15,6 +16,7 @@ import static com.kureda.android.keepaneye.both.util.Res.getString;
  */
 
 public class Util {
+    private static final String TAG = "both.util.Util";
 
     private static final long MINUTE = 60000L; //milliseconds in one minute
     public static final String UTC = "UTC";
@@ -30,6 +32,10 @@ public class Util {
     }
 
     public static void toast(int stringCode) {
-        Toast.makeText(App.getContext(), getString(stringCode), Toast.LENGTH_LONG).show();
+        try {
+            Toast.makeText(App.getContext(), getString(stringCode), Toast.LENGTH_LONG).show();
+        }catch (Exception ex){
+            Log.e(TAG, "Failed to toast",ex);
+        }
     }
 }
