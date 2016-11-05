@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Пригляд</string>
+    <string name="action_settings">Настройки</string>
+    <string name="title_activity_carer_main">Пригляд</string>
+    <string name="title_activity_cared_main">Пригляд</string>
+    <string name="choose_a_mode"><big>Выберите режим</big></string>
+    <string name="show_what_mom_do"><big>Смот\u00ADреть</big>\nкак у них дела</string>
+    <string name="report_what_u_do"><big>Сооб\u00ADщать</big>\nкак у вас дела</string>
+    <string name="are_you_carer">Хотите быть уверены, что у бабушки все в порядке?</string>
+    <string name="are_u_cared">Хотите, чтобы ваша внучка знала, что у вас все в порядке?</string>
+    <string name="title_activity_cared_config">Введите данные</string>
+    <string name="label_keepaneye_id">Номер наблюдателя:</string>
+    <string name="hint_keepaneye_id">12345</string>
+    <string name="name">Ваше имя</string>
+    <string name="hint_name">Бабушка</string>
+    <string name="txt_phone">Телефон наблюдателя:</string>
+    <string name="hint_phone">222222</string>
+    <string name="must_be_number">Должно быть %1$d цифр</string>
+    <plurals name="more">
+        <item quantity="one">Еще одна цифра</item>
+        <item quantity="other">Еще %d цифр</item>
+    </plurals>
+    <plurals name="less">
+        <item quantity="one">Одна цифра лишняя</item>
+        <item quantity="other">%d лишних цифр</item>
+    </plurals>
+    <plurals name="cared_last_report_was">
+        <item quantity="one"><small>Отчет послан одну минуту назад</small></item>
+        <item quantity="other"><small>Отчет послан %1$d мин. назад</small></item>
+    </plurals>
+    <string
+        name="cared_last_report_just_now"><small>Отчет послан меньше минуты
+        назад</small></string>
+    <string name="less">Надо короче</string>
+    <string name="more">Слишком  коротко (или пробелы в тексте)</string>
+    <string name="must_be_phone">Надо длиннее</string>
+
+    <!--Strings for carer-->
+    <string name="description_refresh">Обновить</string>
+    <!--To display in main rows-->
+    <string name="minute">м</string>
+    <string name="hour">ч</string>
+    <string name="day">д</string>
+    <string name="week">н</string>
+    <string name="month">М</string>
+    <string name="year">Г</string>
+    <string name="description_edit">Настройки \"наблюдаемых\"</string>
+    <string name="description_avatar">Портрет</string>
+    <string name="no_cared">Установите это приложение на смартфонах людей,
+        за которыми нужен пригляд.</string>
+    <string name="no_cared2">Ваш номер наблюдателя:</string>
+    <string name="no_cared3">Не давайте этот номер посторонним!</string>
+    <string name="change">Изменить</string>
+    <string name="cancel">Отменить</string>
+    <string name="turn_wifi">Это приложение не может работать без интернета. Подключите интернет
+        (вайфай) и  запустите приложение снова.</string>
+    <string name="registering_in_cloud">Идет регистрация &#8230;</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_carer_config">Настройки</string>
+    <string name="label_choose_sleep">Ложится в</string>
+    <string name="label_choose_wake">Встает в</string>
+    <string name="label_alarms">Когда включать желтую/красную тревогу?</string>
+    <string name="label_report">Нет отчетов:</string>
+    <string name="label_login">Не звонил:</string>
+    <string name="label_walk">Не гулял:</string>
+    <string name="label_ride">Не ездил:</string>
+    <string name="show">Показывать? </string>
+    <string name="hide">Убрать</string>
+    <string name="label_phone_number">Телефон:</string>
+    <string name="cared_no_internet">Нет интернета,\nне могу посылать отчеты</string>
+    <string name="carer_not_yet_reported">Отчетов пока не послано</string>
+    <string name="cared_fix_phone_number">Пожалуйста зайдите в настройки и введите правильный
+        телефонный номер.</string>
+    <string name="this_is_not_phone">С этого устройства звонить невозможно.</string>
+    <string name="cancel_btn_txt">Отменить</string>
+    <string name="save_btn_txt">Сохранить</string>
+    <string name="could_not_upload">Послать отчет не получилось.</string>
+    <string name="could_not_sync">Прочитать отчет не получилось.</string>
+    <string name="too_short">Надо длиннее.</string>
+    <string name="too_long">Надо короче.</string>
+    <string name="not_phone_number">Это еще не телефонный номер.</string>
+    <string name="description_show_id">Показать номер наблюдателя</string>
+    <string name="description_edit_id">Изменить номер наблюдателя</string>
+    <string name="you_will_change_careds">Это значит - показывать вам отчеты о другой группе
+        "наблюдаемых".</string>
+    <string name="only_numbers_allowed">Должны быть только цифры.</string>
+    <string name="should_be_longer">Слишком коротко.</string>
+    <string name="should_be_shorter">Слишком длинно.</string>
+    <string name="install_in_carer_mode">Установить приложение в режиме "наблюдателя".</string>
+    <string name="install_in_cared_mode">Установить приложение в режиме "наблюдаемого".</string>
+    <string name="make_phone_call">Позвонить.</string>
+    <string name="must_sb_btn">mSubmitButton is compulsory.</string>
+    <string name="too_long_mjson_id_string">Too long myjson id string:</string>
+    <string name="is_not_character">cannot be converted to a character.</string>
+    <string name="background_text"><small><small><small>Пригляд</small></small></small></string>
+    <string name="font_family">fonts/OpenSans-CondLight.ttf</string>
+    <string name="nobody_to_edit">Наблюдаемых пока нет, настраивать нечего.</string>
+</resources>

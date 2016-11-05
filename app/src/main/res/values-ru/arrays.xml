@@ -1,0 +1,59 @@
+<resources>
+    <!--If you change those arrays, change carer.util.Util methods and corresponting tests.-->
+    <string-array name="hour_array">
+        <item>1:00</item>
+        <item>2:00</item>
+        <item>3:00</item>
+        <item>4:00</item>
+        <item>5:00</item>
+        <item>6:00</item>
+        <item>7:00</item>
+        <item>8:00</item>
+        <item>9:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+        <item>24:00</item>
+    </string-array>
+
+    <string-array name="alert_array">
+        <item>1 час</item>
+        <item>2 часа</item>
+        <item>3 часа</item>
+        <item>4 часа</item>
+        <item>6 часов</item>
+        <item>8 часов</item>
+        <item>12 часов</item>
+        <item>18 часов</item>
+        <item>1 день</item>
+        <item>1.5 дня</item>
+        <item>2 дня</item>
+        <item>3 дня</item>
+        <item>4 дня</item>
+        <item>1 нед</item>
+        <item>1.5 нед</item>
+        <item>2 нед</item>
+        <item>3 нед</item>
+        <item>1 мес</item>
+        <item>год</item>
+    </string-array>
+
+    <!--<string-array name="name_array">-->
+        <!--<item>Grandparent</item>-->
+        <!--<item>Daddy</item>-->
+        <!--<item>Aristophanus</item>-->
+        <!--<item>Mom</item>-->
+    <!--</string-array>-->
+
+</resources>
