@@ -47,7 +47,6 @@ public class Uploader {
                         } catch (Exception ex) {
                             Log.e(TAG, "Didn't uploaded this time.", ex);
                             State.noUpload();
-                            Util.toast(R.string.could_not_upload);
                         }
                         return null;
                     }
@@ -78,8 +77,6 @@ public class Uploader {
         //get common json
         JSONObject commonJson = MyJson.downloadJson(keepAnEyeId);
         if (commonJson == null) {
-            State.noJson();
-            Util.toast(R.string.could_not_upload);
             return;
         }
 

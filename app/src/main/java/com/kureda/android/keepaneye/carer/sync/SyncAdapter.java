@@ -164,7 +164,6 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
              final ContentResolver contentResolver = context.getContentResolver();
             Uri uri = CaredDbContract.Entry.CONTENT_URI; // Get all entries
             cursor = contentResolver.query(uri, CaredDbProvider.FULL_PROJECTION, null, null, null);
-            //cursor.moveToFirst();
             while (cursor.moveToNext()) {
                 Cared cared = new Cared(null);
                 cared.readFromCursor(cursor);

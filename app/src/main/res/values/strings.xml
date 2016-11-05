@@ -93,4 +93,5 @@
     <string name="is_not_character">cannot be converted to a character.</string>
     <string name="background_text">Keep An Eye</string>
     <string name="font_family">fonts/Unkempt-Regular.ttf</string>
+    <string name="nobody_to_edit">Nobody to edit yet.</string>
 </resources>

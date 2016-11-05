@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.kureda.android.keepaneye.R;
 import com.kureda.android.keepaneye.both.util.PhoneValidator;
@@ -100,12 +101,34 @@ public class CarerConfigActivity extends AppCompatActivity implements AdapterVie
         showKeyboard(false);
         createControls();
         findAllControls();
-        fillDropdownFromDatabase();
+        Cared[] careds = readCaredsFromDatabase();
+        enableControls(careds.length>0);
+        setCaredDropdown(careds);
+        if(mCared==null && careds.length>0){
+            int selected = mCaredSpinner.getSelectedItemPosition();
+            mCared=careds[selected];
+            fillAllControls(mCared);
+        }
     }
 
-    private void fillDropdownFromDatabase() {
-        Cared[] careds = readCaredsFromDatabase();
-        setCaredDropdown(careds);
+    private void enableControls(boolean enable) {
+        mCaredSpinner.setEnabled(enable);
+        mAvatarSpinner.setEnabled(enable);
+        mSleepSpinner.setEnabled(enable);
+        mWakeSpinner.setEnabled(enable);
+        mReportYellowSpinner.setEnabled(enable);
+        mReportRedSpinner.setEnabled(enable);
+        mLoginYellowSpinner.setEnabled(enable);
+        mLoginRedSpinner.setEnabled(enable);
+        mWalkYellowSpinner.setEnabled(enable);
+        mWalkRedSpinner.setEnabled(enable);
+        mRideYellowSpinner.setEnabled(enable);
+        mRideRedSpinner.setEnabled(enable);
+        mHideSwitch.setEnabled(enable);
+        mPhoneText.setEnabled(enable);
+        if(! enable){
+            Toast.makeText(this, getString(R.string.nobody_to_edit), Toast.LENGTH_LONG).show();
+        }
     }
 
     public void showKeyboard(boolean visible) {

@@ -85,8 +85,9 @@ public class Cared implements Serializable {
 
     public static int getColor(int i, boolean greenBecomesTransparent) {
         Context context = App.getContext();
-        if (i == RED)
+        if (i == RED) {
             return ContextCompat.getColor(context, R.color.red);
+        }
         if (i == YELLOW)
             return ContextCompat.getColor(context, R.color.orange);
         if (i == GREEN) {
@@ -134,7 +135,6 @@ public class Cared implements Serializable {
         walkRed = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_NAME_WALK_RED));
         rideYellow = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_NAME_RIDE_YELLOW));
         rideRed = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_NAME_RIDE_RED));
-        //cursor.close();
         return this;
     }
 
@@ -205,8 +205,9 @@ public class Cared implements Serializable {
         if (ago >= redThreshold) {
             return RED;
         }
-        if (ago >= yellowThreshold)
+        if (ago >= yellowThreshold) {
             return YELLOW;
+        }
         return GREEN;
     }
 

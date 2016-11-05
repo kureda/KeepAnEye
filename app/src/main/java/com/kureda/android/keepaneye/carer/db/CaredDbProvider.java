@@ -260,10 +260,10 @@ public class CaredDbProvider extends ContentProvider {
         private static final String TYPE_INTEGER = " INTEGER";
         private static final String DEFAULT_0 = " DEFAULT 0, ";
         private static final String DEFAULT_1 = " DEFAULT 1, ";
-        private static final String DEFAULT_HD = " DEFAULT 800, ";
-        private static final String DEFAULT_DAY = " DEFAULT 1500, ";
-        private static final String DEFAULT_WEEK = " DEFAULT 10000, ";
-        private static final String DEFAULT_MONTH = " DEFAULT 50000";
+        private static final String DEFAULT_HD = " DEFAULT 720, "; // 720 minutes i.e. half-day
+        private static final String DEFAULT_DAY = " DEFAULT 1440, ";
+        private static final String DEFAULT_WEEK = " DEFAULT 10080, ";
+        private static final String DEFAULT_MONTH = " DEFAULT 43200";
         private static final String COMMA_SEP = ",";
         /**
          * SQL statement to create "entry" table.

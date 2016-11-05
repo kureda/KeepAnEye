@@ -7,6 +7,8 @@ package com.kureda.android.keepaneye.carer.util;
 public class Util {
 
     static final int THOUSAND_YEARS = 60 * 24 * 365 * 1000;
+
+    //corresponding to res/values/arrays.xml: alert_array
     private static int[] intervals = {
             60,
             60 * 2,
@@ -55,34 +57,9 @@ public class Util {
 
     public static int intervalToIndex(int interval) {
         for (int i = 0; i < intervals.length; i++) {
-            if (intervals[i] == interval)
+            if (intervals[i] >= interval)
                 return i;
         }
-        if (interval < 60)
-            return 0;
-        return 18;//forever
+        return intervals.length-1;//forever
     }
 }
-/*    <string-array name="alert_array">
-        <item>1 hr</item>
-        <item>2 hrs</item>
-        <item>3 hrs</item>
-        <item>4 hrs</item>
-        <item>6 hrs</item>
-        <item>8 hrs</item>
-        <item>12 hrs</item>
-        <item>18 hrs</item>
-        <item>1 day</item>
-        <item>1.5 ds</item>
-        <item>2 days</item>
-        <item>3 days</item>
-        <item>4 days</item>
-        <item>1 week</item>
-        <item>1.5 w</item>
-        <item>2 wks</item>
-        <item>3 wks</item>
-        <item>1 mnth</item>
-        <item>never</item>
-    </string-array>
-
-     */
